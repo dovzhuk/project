@@ -6,6 +6,13 @@
 
 .hero__content {
   display: flex;
+  
+  @include tablets {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 20%;
+  }
 }
 
 .hero__container {
@@ -20,13 +27,19 @@
 .hero__right {
   float: left;
   width: 50%;
+  @include tablets() {
+    float: none;
+    width: auto;
+  }
 }
 
-.hero__left {
-}
+.hero__left {}
 
 .hero__right {
   padding-top: rem(115px);
+  @include tablets() {
+    padding-top: 0;
+  }
 }
 
 .hero__desc {

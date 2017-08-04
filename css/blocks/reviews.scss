@@ -13,6 +13,11 @@
   width: 25%;
   height: 50%;
   position: relative;
+
+  @include tablets {
+    width: 50%;
+    height: 25%;
+  }
 }
 
 .review {
@@ -58,6 +63,12 @@
   padding: 17% 12% 0;
   transition: .3s;
   z-index: 10;
+
+  @include tablets {
+    font-size: rem(14px);
+    padding: 0 12%;
+    text-align: center;
+  }
 }
 
 .review__title {
@@ -65,6 +76,10 @@
   @include gagalin;
   font-size: rem(14px);
   margin-bottom: rem(25px);
+
+  @include tablets {
+    margin-bottom: rem(14px);
+  }
 }
 
 .review__shorttext {
@@ -72,6 +87,10 @@
   font-size: rem(14px);
   @include ubuntu(light);
   margin-bottom: rem(13px);
+
+  @include phones {
+    display: none;
+  }
 }
 
 .review__view {

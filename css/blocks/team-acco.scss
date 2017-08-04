@@ -25,8 +25,13 @@
 	@include gagalin;
 	text-decoration: none;
 	position: relative;
-	display: block;
-	margin-bottom: rem(20px);
+  display: inline-flex;
+  margin-bottom: rem(20px);
+  align-items: center;  
+  
+  @include tablets() {
+    font-size: rem(25px);
+  }
 
 	&:before, &:after {
 		content: "";
