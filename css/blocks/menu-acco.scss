@@ -3,11 +3,10 @@
 	right: 0;
 	top: 0;
 	bottom: 0;
-	@extend %clearfix;
+  display: flex;
 }
 
 .menu-acco__item {
-	float: left;
 	height: 100%;
 
 	&.active {
@@ -25,10 +24,6 @@
 	@include cover;
 	text-decoration: none;
   position: relative;
-  
-  @include phones {
-    width: rem(50px);
-  }
 }
 
 .menu-acco__trigger-text {
@@ -43,10 +38,6 @@
   left: 50%;
   top: 100%;
   margin-top: rem(-20px);
-
-  @include phones {
-    font-size: rem(26px);
-  }
 }
 
 .menu-acco__content {
@@ -65,8 +56,4 @@
 	width: 100%;
   line-height: 1.8;
   display: none;
-
-  @include phones {
-    padding: rem(25px) rem(15px);
-  }
 }

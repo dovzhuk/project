@@ -1,9 +1,4 @@
 .nav {
-	@include inlineblock(middle);
-
-	@include tablets {
-		display: none;
-	}
 
 	&_hamburger {
 		width: auto;
@@ -28,17 +23,12 @@
 
 .nav__list {
 	width: 100%;
-	@extend %clearfix;
-
-	@include laptop {
-		text-align: center;
-	}
+  display: flex;
+  align-items: center;
 }
 
 .nav__item {
 	white-space: nowrap;
-	display: inline-block;
-	vertical-align: middle;
 
 	&:last-child {
 		margin-right: 0;
@@ -49,17 +39,15 @@
 
 	&:after {
 		content: "";
-		@include inlineblock(middle);
-		width: rem(4px);
-		height: rem(4px);
+		width: 4px;
+		height: 4px;
 		border-radius: 50%;
 		background: white;
-		margin: 0 rem(12px);
+		margin: 0 12px;
 	}
 }
 
 .nav__link {
-	@include inlineblock(middle);
 	font-size: rem(13px);
 	text-transform: uppercase;
 	color: white;

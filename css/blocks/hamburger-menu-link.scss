@@ -4,11 +4,7 @@
 	height: rem(22px);
 	align-items: center;
 	margin-left: rem(30px);
-	display: none;
-
-	@include tablets {
-		display: inline-flex;
-	}
+	display: flex;
 }
 
 .hamburger-menu-link__bars {

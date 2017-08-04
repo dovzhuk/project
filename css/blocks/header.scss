@@ -5,10 +5,14 @@
 	align-items: center;
 }
 
+.header__btns {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
 .header__logo {
-	@include laptop {
-		width: 15%;
-	}
+
 }
 
 .header__links {
@@ -20,12 +24,4 @@
 	flex: 1;
 	text-align: right;
 	margin-right: rem(20px);
-
-	@include laptop {
-		width: 85%;
-	}
-
-	@include tablets {
-		text-align: right;
-	}
 }

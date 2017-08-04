@@ -9,34 +9,18 @@
 }
 
 .order__form {
-  @extend %clearfix;
   margin-left: -5%;
-  @include tablets {
-    margin-left: 0;
-    padding: 0 20%;
-  }
-  @include phones {
-    padding: 0;
-  }
+  display: flex;
 }
 
 .order__form-col {
-  float: left;
   width: 45%;
   margin-left: 5%;
-  @include tablets {
-    width: 100%;
-    float: none;
-    margin-left: 0;
-  }
 }
 
 .order__form-row {
   margin-bottom: rem(16px);
   display: flex;
-  @include phones {
-    margin-bottom: rem(7px);
-  }
 }
 
 .order__form-label {
@@ -44,9 +28,6 @@
   @include ubuntu();
   color: #fff;
   font-size: rem(14px);
-  @include phones {
-    margin-bottom: rem(5px);
-  }
 }
 
 .order__form-input {
@@ -61,22 +42,13 @@
 .order__form-block {
   display: block;
   width: 100%;
+  flex: 1;
+  margin-left: 10px;
 }
 
-.order__form-row_double {
-  margin-left: rem(-20px);
-  .order__form-block {
-    width: calc(100% / 2 - rem(20px));
-    margin-left: rem(20px);
-  }
-}
-
-.order__form-row_quatro {
-  margin-left: rem(-20px);
-  .order__form-block {
-    width: calc(100% / 4 - rem(20px));
-    margin-left: rem(20px);
-  }
+.order__form-row {
+  display: flex;
+  margin-left: -10px;
 }
 
 .order__form-input_textarea {
@@ -84,21 +56,15 @@
   resize: none;
 }
 
-.order__form-buttons {
-  @include phones {
-    .order__form-row {
-      justify-content: center;
-      margin-bottom: rem(17px);
-    }
-  }
-}
+.order__form-buttons {}
 
 .order__radio {
   position: relative;
   white-space: nowrap;
   margin-right: rem(20px);
-  @include inlineblock(middle);
   cursor: pointer;
+  display: flex;
+  align-items: center;
 }
 
 .order__radio-elem {
@@ -112,7 +78,6 @@
   height: rem(16px);
   border-radius: 50%;
   background: #fff;
-  @include inlineblock(middle);
   position: relative;
   &:after {
     content: "";
@@ -139,7 +104,6 @@
 }
 
 .order__radio-title {
-  @include inlineblock(middle);
   font-size: rem(14px);
   color: #fff;
   margin-left: rem(10px);
@@ -169,7 +133,6 @@
 }
 
 .order__form-button {
-  @include inlineblock(middle);
   margin-right: rem(20px);
   border: 0;
   background: $red;
