@@ -78,12 +78,6 @@
 }
 
 .team-acco__pic, .team-acco__text {
-	float: left;
-
-	@include tablets {
-		float: none;
-		width: 100%;
-	}
 }
 
 .team-acco__title {
